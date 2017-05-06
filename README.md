@@ -1,16 +1,13 @@
-# Genesis Sample Theme
+Working on a new theme for my personal site, this time with the Genesis framework as a base, instead of Thematic. Currently converting to my workflow. Once the site is done (or close enough), I will fork them and yank out the custom styles and create a new stripped down child starter theme for other projects.
 
-Github project link: https://github.com/copyblogger/genesis-sample/
+# Genesis Starter Theme
+
+Github project link:
 
 
 ## Installation Instructions
 
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
+1.
 
 
 ## Theme Support
-
-Please visit http://my.studiopress.com/help/ for theme support.
