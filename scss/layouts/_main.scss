@@ -1,6 +1,6 @@
 $susy: (
     columns: 12,
-    gutters: 4,
+    gutters: 1,
     math: fluid,
     output: float,
     gutter-position: inside,
@@ -12,56 +12,55 @@ $susy: (
 --------------------------------------------- */
 
 .site-container {
-
-  @include breakpoint(large) {
-  //  @include container(70em); // set susy grid container (1120px)
-  }
 }
+
 .site-header {
   background-color: #fff;
 }
 
 .site-header > .wrap {
   @include breakpoint(large) {
-    @include container(70em); // set susy grid container (1120px)
+    @include container(1120px); // set susy grid container (1120px)
   }
 }
+
 .site-header .title-area {
   @include breakpoint(large) {
     @include span(8);
   }
 }
+
 .site-header .widget-area {
   @include breakpoint(large) {
     @include span(last 4);
   }
 }
+
 .site-inner {
   clear: both;
   padding-top: 40px;
   word-wrap: break-word;
+  @include breakpoint(medium) {
+    @include container(1120px); // set susy grid container (1120px)
+  }
 }
 
 .landing-page .site-inner {
- //  max-width: 800px;
 }
-
 
 ////// uhhhhhh here for now.
 
-  .after-entry,
-  .archive-description,
-  .author-box,
-  .comment-respond,
-  .entry,
-  .entry-comments,
-  .entry-pings,
-  .sidebar .widget {
-    padding: 30px;
-    margin-bottom: 5%;
-  }
-
-
+.after-entry,
+.archive-description,
+.author-box,
+.comment-respond,
+.entry,
+.entry-comments,
+.entry-pings,
+.sidebar .widget {
+  padding: 30px;
+  margin-bottom: 5%;
+}
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
@@ -69,97 +68,126 @@ $susy: (
 /* ### Wrapping div for .content and .sidebar-primary */
 
 .content-sidebar-wrap {
-  @include breakpoint(medium) {
-    @include container(70em); // set susy grid container (1120px)
-  }
+
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap,
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-
-
-
-}
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-  //float: left;
-}
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  //float: right;
 }
 
 /* ### Content */
-
 .content {
-
 }
 
-.content-sidebar .content {
-  @include breakpoint(large) {
-    @include span(8);
+.sidebar-primary {
+}
+
+.sidebar-secondary {
+}
+
+.content-sidebar {
+  .content {
+    @include breakpoint(large) {
+      @include span(8);
+    }
+  }
+  .sidebar-primary {
+    @include breakpoint(large) {
+      @include span(last 4);
+    }
   }
 }
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
+
+.sidebar-content {
+  .content {
+    @include breakpoint(large) {
+      @include span(last 8);
+    }
+  }
+  .sidebar-primary {
+    @include breakpoint(large) {
+      @include span(4);
+    }
+  }
+}
+
+.content-sidebar-sidebar {
+  .content {
+    @include breakpoint(large) {
+      @include span(6);
+    }
+  }
+  .sidebar-primary {
+    @include breakpoint(large) {
+      @include span(3);
+    }
+  }
+  .sidebar-secondary {
+    @include breakpoint(large) {
+      @include span(last 3);
+    }
+  }
+}
+
+.sidebar-content-sidebar {
+  .content {
+    @include breakpoint(large) {
+      @include span(isolate 6 at 3);
+    }
+  }
+  .sidebar-primary {
+    @include breakpoint(large) {
+      @include span(3);
+    }
+  }
+  .sidebar-secondary {
+    @include breakpoint(large) {
+      @include span(last 3);
+    }
+  }
+}
+
+.sidebar-sidebar-content {
+  .content {
+    @include breakpoint(large) {
+      @include span(last 6);
+    }
+  }
+  .sidebar-primary {
+    @include breakpoint(large) {
+      @include span(isolate 3 at 4);
+    }
+  }
+  .sidebar-secondary {
+    @include breakpoint(large) {
+      @include span(3);
+    }
+  }
 }
 
 .full-width-content .content {
 }
 
-/* ### Primary Sidebar */
-
-.sidebar-primary {
- @include breakpoint(large) {
-   @include span(last 4);
- }
-}
-
-.sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
-  //float: left;
-}
-
-/* ### Secondary Sidebar */
-
-.sidebar-secondary {
-  //float: left;
-  //width: 180px;
-}
-
-.content-sidebar-sidebar .sidebar-secondary {
-  //float: right;
-}
-
 /* ### Footer */
 
 .footer-widgets .wrap {
-
-
-  @include breakpoint(large) {
-    @include container(70em); // set susy grid container (1120px)
-  }
+  @include container(70em); // set susy grid container (1120px)
 }
 
 .footer-widgets-1 {
-
   @include breakpoint(medium) {
     @include span(4);
   }
 }
 
 .footer-widgets-2 {
-
   @include breakpoint(medium) {
     @include span(4);
   }
 }
 
 .footer-widgets-3 {
-
   @include breakpoint(medium) {
     @include span(last 4);
   }
