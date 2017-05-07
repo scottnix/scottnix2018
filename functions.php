@@ -19,7 +19,7 @@ include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 // Set Localization (do not remove).
 add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
 function genesis_sample_localization_setup(){
-	load_child_theme_textdomain( 'genesis-sample', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( 'scottnix2018', get_stylesheet_directory() . '/languages' );
 }
 
 // Add the helper functions.
