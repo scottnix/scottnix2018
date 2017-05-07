@@ -1,0 +1,11 @@
+# snippets - fs
+
+<snippet>
+    <content><![CDATA[
+@include font-size($1);$2]]></content>
+
+    <tabTrigger>fs</tabTrigger>
+    <scope>source.scss, source.sass</scope>
+</snippet>
+
+# snippets - mq
