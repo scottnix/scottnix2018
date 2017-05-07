@@ -1,12 +1,41 @@
+$susy: (
+    columns: 12,
+    gutters: 4,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
+    global-box-sizing: (border-box)
+);
+
+
 /* ## Site Containers
 --------------------------------------------- */
 
-.site-inner,
-.wrap {
-  margin: 0 auto;
-  max-width: 1280px;
+.site-container {
+
+  @include breakpoint(large) {
+  //  @include container(70em); // set susy grid container (1120px)
+  }
+}
+.site-header {
+  background-color: #fff;
 }
 
+.site-header > .wrap {
+  @include breakpoint(large) {
+    @include container(70em); // set susy grid container (1120px)
+  }
+}
+.site-header .title-area {
+  @include breakpoint(large) {
+    @include span(8);
+  }
+}
+.site-header .widget-area {
+  @include breakpoint(large) {
+    @include span(last 4);
+  }
+}
 .site-inner {
   clear: both;
   padding-top: 40px;
@@ -14,73 +43,126 @@
 }
 
 .landing-page .site-inner {
-  max-width: 800px;
+ //  max-width: 800px;
 }
+
+
+////// uhhhhhh here for now.
+
+  .after-entry,
+  .archive-description,
+  .author-box,
+  .comment-respond,
+  .entry,
+  .entry-comments,
+  .entry-pings,
+  .sidebar .widget {
+    padding: 30px;
+    margin-bottom: 5%;
+  }
+
+
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
 
 /* ### Wrapping div for .content and .sidebar-primary */
 
+.content-sidebar-wrap {
+  @include breakpoint(medium) {
+    @include container(70em); // set susy grid container (1120px)
+  }
+}
+
 .content-sidebar-sidebar .content-sidebar-wrap,
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-  width: 1060px;
+
+
+
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap {
-  float: left;
+  //float: left;
 }
 
 .sidebar-content-sidebar .content-sidebar-wrap,
 .sidebar-sidebar-content .content-sidebar-wrap {
-  float: right;
+  //float: right;
 }
 
 /* ### Content */
 
 .content {
-  float: right;
-  width: 880px;
+
 }
 
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
-  float: left;
+.content-sidebar .content {
+  @include breakpoint(large) {
+    @include span(8);
+  }
 }
-
 .content-sidebar-sidebar .content,
 .sidebar-content-sidebar .content,
 .sidebar-sidebar-content .content {
-  width: 660px;
 }
 
 .full-width-content .content {
-  width: 100%;
 }
 
 /* ### Primary Sidebar */
 
 .sidebar-primary {
-  float: right;
-  width: 360px;
+ @include breakpoint(large) {
+   @include span(last 4);
+ }
 }
 
 .sidebar-content .sidebar-primary,
 .sidebar-sidebar-content .sidebar-primary {
-  float: left;
+  //float: left;
 }
 
 /* ### Secondary Sidebar */
 
 .sidebar-secondary {
-  float: left;
-  width: 180px;
+  //float: left;
+  //width: 180px;
 }
 
 .content-sidebar-sidebar .sidebar-secondary {
-  float: right;
+  //float: right;
+}
+
+/* ### Footer */
+
+.footer-widgets .wrap {
+
+
+  @include breakpoint(large) {
+    @include container(70em); // set susy grid container (1120px)
+  }
+}
+
+.footer-widgets-1 {
+
+  @include breakpoint(medium) {
+    @include span(4);
+  }
+}
+
+.footer-widgets-2 {
+
+  @include breakpoint(medium) {
+    @include span(4);
+  }
+}
+
+.footer-widgets-3 {
+
+  @include breakpoint(medium) {
+    @include span(last 4);
+  }
 }
 
 /* ## Column Classes
@@ -98,43 +180,48 @@
 .two-fourths,
 .two-sixths,
 .two-thirds {
-  float: left;
-  margin-left: 2.564102564102564%;
+
+  @include breakpoint(600px) {
+     float: left;
+     margin-left: 2.564102564102564%;
+  }
 }
 
-.one-half,
-.three-sixths,
-.two-fourths {
-  width: 48.717948717948715%;
-}
+@include breakpoint(600px) {
+  .one-half,
+  .three-sixths,
+  .two-fourths {
+    width: 48.717948717948715%;
+  }
 
-.one-third,
-.two-sixths {
-  width: 31.623931623931625%;
-}
+  .one-third,
+  .two-sixths {
+    width: 31.623931623931625%;
+  }
 
-.four-sixths,
-.two-thirds {
-  width: 65.81196581196582%;
-}
+  .four-sixths,
+  .two-thirds {
+    width: 65.81196581196582%;
+  }
 
-.one-fourth {
-  width: 23.076923076923077%;
-}
+  .one-fourth {
+    width: 23.076923076923077%;
+  }
 
-.three-fourths {
-  width: 74.35897435897436%;
-}
+  .three-fourths {
+    width: 74.35897435897436%;
+  }
 
-.one-sixth {
-  width: 14.52991452991453%;
-}
+  .one-sixth {
+    width: 14.52991452991453%;
+  }
 
-.five-sixths {
-  width: 82.90598290598291%;
-}
+  .five-sixths {
+    width: 82.90598290598291%;
+  }
 
-.first {
-  clear: both;
-  margin-left: 0;
+  .first {
+    clear: both;
+    margin-left: 0;
+  }
 }
