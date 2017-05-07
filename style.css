@@ -17,8 +17,10 @@
 
   Text Domain: scottnix2018
 */
-
 /* # Table of Contents
+- Mixins
+  - Susy Grids
+  - Custom Mixins
 - HTML5 Reset
   - Baseline Normalize
   - Box Sizing
@@ -31,7 +33,7 @@
   - Forms
   - Tables
   - Screen Reader Text
-- Structure and Layout
+- Layout and Structure
   - Site Containers
   - Column Widths and Positions
   - Column Classes
@@ -68,6 +70,7 @@
   - Max-width: 1200px
   - Max-width: 1023px
   - Max-width: 860px
+- Helper Classes
 - Print Styles
 */
 /* # Reset
@@ -742,7 +745,7 @@ th:first-child {
   position: relative;
 }
 
-/* # Structure and Layout
+/* #  Layout and Structure
 ---------------------------------------------------------------------------------------------------- */
 /* ## Site Containers
 --------------------------------------------- */
@@ -914,8 +917,8 @@ th:first-child {
 .archive-description,
 .author-box {
   background-color: #fff;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   margin-bottom: 40px;
   padding: 60px;
 }
@@ -1852,8 +1855,7 @@ p.entry-meta {
 @media only screen and (max-width: 860px) {
   body,
   body > div {
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 5rem;
   }
 
   .site-inner {

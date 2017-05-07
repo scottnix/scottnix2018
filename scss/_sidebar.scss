@@ -1,0 +1,9 @@
+.sidebar {
+  @include font-size(1.6);
+  margin-bottom: 40px;
+}
+
+.sidebar .widget {
+  background-color: #fff;
+  padding: 40px;
+}
