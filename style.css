@@ -847,8 +847,6 @@ th:first-child {
   .content-sidebar-sidebar .sidebar-primary {
     width: 33.33333%;
     float: left;
-    margin-left: 58.33333%;
-    margin-right: -100%;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
   }
@@ -865,8 +863,6 @@ th:first-child {
   .content-sidebar-sidebar .sidebar-secondary {
     width: 33.33333%;
     float: left;
-    margin-left: 58.33333%;
-    margin-right: -100%;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
   }
@@ -926,6 +922,8 @@ th:first-child {
   .sidebar-sidebar-content .sidebar-secondary {
     width: 25%;
     float: left;
+    margin-left: 0;
+    margin-right: -100%;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
   }
@@ -961,6 +959,8 @@ th:first-child {
   .sidebar-content-sidebar .sidebar-primary {
     width: 25%;
     float: left;
+    margin-left: 75%;
+    margin-right: -100%;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
   }
@@ -976,7 +976,9 @@ th:first-child {
 @media (min-width: 70em) {
   .sidebar-content-sidebar .sidebar-secondary {
     width: 25%;
-    float: right;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
     padding-left: 1.38889%;
     padding-right: 1.38889%;
   }
