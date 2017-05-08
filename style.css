@@ -1780,7 +1780,16 @@ p.entry-meta {
 .footer-widgets {
   background-color: #fff;
   clear: both;
-  padding: 60px 0;
+  padding: 30px;
+}
+@media (min-width: 50em) {
+  .footer-widgets {
+    padding: 60px;
+  }
+}
+
+.footer-widget-area {
+  margin-bottom: 5%;
 }
 
 /* # Site Footer

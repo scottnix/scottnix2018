@@ -149,3 +149,18 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+
+// custom stuff here for now.
+
+//* Remove the site footer
+remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+
+//* Customize the site footer
+add_action( 'genesis_footer', 'bg_custom_footer' );
+function bg_custom_footer() { ?>
+  <div class="site-footer"><div class="wrap"><p>Shh!</p></div></div>
+<?php
+}

@@ -1,6 +1,13 @@
 .footer-widgets {
   background-color: #fff;
   clear: both;
-  padding: 60px 0;
+  padding: 30px;
+  @include breakpoint(medium) {
+    padding: 60px;
+  }
 }
+.footer-widget-area {
+  margin-bottom: 5%;
+}
+
 
