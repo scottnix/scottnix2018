@@ -33,9 +33,12 @@
 .archive-description,
 .author-box {
   background-color: #fff;
-  @include font-size();
-  margin-bottom: 40px;
-  padding: 60px;
+  @include font-size(1.8);
+  padding: 30px;
+  margin-bottom: 5%;
+  @include breakpoint(medium) {
+    padding: 60px;
+  }
 }
 
 .archive-description p:last-child,

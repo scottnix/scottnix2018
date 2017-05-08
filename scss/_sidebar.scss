@@ -9,5 +9,9 @@
 
 .sidebar .widget {
   background-color: #fff;
-  padding: 40px;
+  padding: 30px;
+  margin-bottom: 5%;
+  @include breakpoint(medium) {
+    padding: 40px;
+  }
 }

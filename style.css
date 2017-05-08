@@ -741,10 +741,6 @@ th:first-child {
 ---------------------------------------------------------------------------------------------------- */
 /* ## Site Containers
 --------------------------------------------- */
-.site-header {
-  background-color: #fff;
-}
-
 @media (min-width: 70em) {
   .site-header > .wrap {
     max-width: 80em;
@@ -792,18 +788,6 @@ th:first-child {
     display: block;
     clear: both;
   }
-}
-
-.after-entry,
-.archive-description,
-.author-box,
-.comment-respond,
-.entry,
-.entry-comments,
-.entry-pings,
-.sidebar .widget {
-  padding: 30px;
-  margin-bottom: 5%;
 }
 
 /* ## Column Widths and Positions
@@ -1139,10 +1123,17 @@ th:first-child {
 .archive-description,
 .author-box {
   background-color: #fff;
-  font-size: 16px;
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-  padding: 60px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 30px;
+  margin-bottom: 5%;
+}
+@media (min-width: 50em) {
+  .after-entry,
+  .archive-description,
+  .author-box {
+    padding: 60px;
+  }
 }
 
 .archive-description p:last-child,
@@ -1415,6 +1406,10 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 /* ## Title Area
 --------------------------------------------- */
+.site-header {
+  background-color: #fff;
+}
+
 .title-area {
   float: left;
   padding: 10px 0;
@@ -1598,8 +1593,13 @@ img.alignright,
 --------------------------------------------- */
 .entry {
   background-color: #fff;
-  margin-bottom: 40px;
-  padding: 70px 80px;
+  padding: 30px;
+  margin-bottom: 5%;
+}
+@media (min-width: 50em) {
+  .entry {
+    padding: 70px 80px;
+  }
 }
 
 .entry-content ol,
@@ -1695,16 +1695,21 @@ p.entry-meta {
   background-color: #fff;
   font-size: 16px;
   font-size: 1.6rem;
-  margin-bottom: 40px;
+  padding: 30px;
+  margin-bottom: 5%;
 }
 
-.comment-respond,
-.entry-pings {
-  padding: 60px 60px 32px;
+@media (min-width: 50em) {
+  .comment-respond,
+  .entry-pings {
+    padding: 60px 60px 32px;
+  }
 }
 
-.entry-comments {
-  padding: 60px;
+@media (min-width: 50em) {
+  .entry-comments {
+    padding: 60px;
+  }
 }
 
 .comment-list li {
@@ -1761,7 +1766,13 @@ p.entry-meta {
 
 .sidebar .widget {
   background-color: #fff;
-  padding: 40px;
+  padding: 30px;
+  margin-bottom: 5%;
+}
+@media (min-width: 50em) {
+  .sidebar .widget {
+    padding: 40px;
+  }
 }
 
 /* # Footer Widgets

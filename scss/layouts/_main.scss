@@ -7,7 +7,6 @@ $susy: (
     global-box-sizing: (border-box)
 );
 
-
 /* ## Site Containers
 --------------------------------------------- */
 
@@ -15,7 +14,6 @@ $susy: (
 }
 
 .site-header {
-  background-color: #fff;
 }
 
 .site-header > .wrap {
@@ -46,20 +44,6 @@ $susy: (
 }
 
 .landing-page .site-inner {
-}
-
-////// uhhhhhh here for now.
-
-.after-entry,
-.archive-description,
-.author-box,
-.comment-respond,
-.entry,
-.entry-comments,
-.entry-pings,
-.sidebar .widget {
-  padding: 30px;
-  margin-bottom: 5%;
 }
 
 /* ## Column Widths and Positions

@@ -3,8 +3,12 @@
 
 .entry {
   background-color: #fff;
-  margin-bottom: 40px;
-  padding: 70px 80px;
+  padding: 30px;
+  margin-bottom: 5%;
+
+  @include breakpoint(medium) {
+    padding: 70px 80px;
+  }
 }
 
 .entry-content ol,
@@ -100,16 +104,21 @@ p.entry-meta {
 .entry-pings {
   background-color: #fff;
   @include font-size(1.6);
-  margin-bottom: 40px;
+  padding: 30px;
+  margin-bottom: 5%;
 }
 
 .comment-respond,
 .entry-pings {
-  padding: 60px 60px 32px;
+  @include breakpoint(medium) {
+    padding: 60px 60px 32px;
+  }
 }
 
 .entry-comments {
-  padding: 60px;
+  @include breakpoint(medium) {
+    padding: 60px;
+  }
 }
 
 .comment-list li {
