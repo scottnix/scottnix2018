@@ -20,7 +20,7 @@ $susy: (
 
 .site-header > .wrap {
   @include breakpoint(large) {
-    @include container(1120px); // set susy grid container (1120px)
+    @include container(80em); // set susy grid container (1120px)
   }
 }
 
@@ -40,8 +40,8 @@ $susy: (
   clear: both;
   padding-top: 40px;
   word-wrap: break-word;
-  @include breakpoint(medium) {
-    @include container(1120px); // set susy grid container (1120px)
+  @include breakpoint(large) {
+    @include container(80em); // set susy grid container (1120px)
   }
 }
 
@@ -172,23 +172,23 @@ $susy: (
 /* ### Footer */
 
 .footer-widgets .wrap {
-  @include container(70em); // set susy grid container (1120px)
+  @include container(80em); // set susy grid container (1120px)
 }
 
 .footer-widgets-1 {
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     @include span(4);
   }
 }
 
 .footer-widgets-2 {
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     @include span(4);
   }
 }
 
 .footer-widgets-3 {
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     @include span(last 4);
   }
 }
