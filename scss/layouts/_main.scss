@@ -1,6 +1,6 @@
 $susy: (
     columns: 12,
-    gutters: 1,
+    gutters: .5,
     math: fluid,
     output: float,
     gutter-position: inside,
@@ -20,7 +20,7 @@ $susy: (
 
 .site-header > .wrap {
   @include breakpoint(large) {
-    @include container(80em); // set susy grid container (1120px)
+    @include container(80em); // set susy grid container
   }
 }
 
@@ -41,7 +41,7 @@ $susy: (
   padding-top: 40px;
   word-wrap: break-word;
   @include breakpoint(large) {
-    @include container(80em); // set susy grid container (1120px)
+    @include container(80em); // set susy grid container
   }
 }
 
@@ -65,10 +65,7 @@ $susy: (
 /* ## Column Widths and Positions
 --------------------------------------------- */
 
-/* ### Wrapping div for .content and .sidebar-primary */
-
 .content-sidebar-wrap {
-
 }
 
 .content-sidebar-sidebar .content-sidebar-wrap,
@@ -77,6 +74,7 @@ $susy: (
 }
 
 /* ### Content */
+
 .content {
 }
 
@@ -114,34 +112,25 @@ $susy: (
 
 .content-sidebar-sidebar {
   .content {
+    @include breakpoint(medium) {
+      @include span(8);
+    }
     @include breakpoint(large) {
       @include span(6);
     }
   }
   .sidebar-primary {
+    @include breakpoint(medium) {
+     @include span(isolate 4 at 8);
+    }
     @include breakpoint(large) {
       @include span(3);
     }
   }
   .sidebar-secondary {
-    @include breakpoint(large) {
-      @include span(last 3);
+    @include breakpoint(medium) {
+      @include span(isolate 4 at 8);
     }
-  }
-}
-
-.sidebar-content-sidebar {
-  .content {
-    @include breakpoint(large) {
-      @include span(isolate 6 at 3);
-    }
-  }
-  .sidebar-primary {
-    @include breakpoint(large) {
-      @include span(3);
-    }
-  }
-  .sidebar-secondary {
     @include breakpoint(large) {
       @include span(last 3);
     }
@@ -150,29 +139,68 @@ $susy: (
 
 .sidebar-sidebar-content {
   .content {
+    @include breakpoint(medium) {
+      @include span(last 8);
+    }
     @include breakpoint(large) {
       @include span(last 6);
     }
   }
   .sidebar-primary {
+    @include breakpoint(medium) {
+      @include span(span 4 at 1);
+    }
     @include breakpoint(large) {
       @include span(isolate 3 at 4);
     }
   }
   .sidebar-secondary {
+    @include breakpoint(medium) {
+      @include span(span 4 at 1);
+    }
     @include breakpoint(large) {
       @include span(3);
     }
   }
 }
 
+.sidebar-content-sidebar {
+  .content {
+    @include breakpoint(medium) {
+      @include span(span 8);
+    }
+    @include breakpoint(large) {
+      @include span(isolate 6 at 4);
+    }
+  }
+  .sidebar-primary {
+    @include breakpoint(medium) {
+      @include span(span 4 at 8);
+    }
+    @include breakpoint(large) {
+      @include span(3);
+    }
+  }
+  .sidebar-secondary {
+    @include breakpoint(medium) {
+      @include span(span 4 at 8);
+    }
+    @include breakpoint(large) {
+      @include span(last 3);
+    }
+  }
+}
+
 .full-width-content .content {
+  @include breakpoint(large) {
+    @include span(12);
+  }
 }
 
 /* ### Footer */
 
 .footer-widgets .wrap {
-  @include container(80em); // set susy grid container (1120px)
+  @include container(80em); // set susy grid container
 }
 
 .footer-widgets-1 {
@@ -195,7 +223,7 @@ $susy: (
 
 /* ## Column Classes
 --------------------------------------------- */
-/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+// Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
 
 .five-sixths,
 .four-sixths,

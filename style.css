@@ -762,8 +762,8 @@ th:first-child {
   .site-header .title-area {
     width: 66.66667%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
@@ -771,8 +771,8 @@ th:first-child {
   .site-header .widget-area {
     width: 33.33333%;
     float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
@@ -808,22 +808,21 @@ th:first-child {
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
-/* ### Wrapping div for .content and .sidebar-primary */
 /* ### Content */
 @media (min-width: 70em) {
   .content-sidebar .content {
     width: 66.66667%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 @media (min-width: 70em) {
   .content-sidebar .sidebar-primary {
     width: 33.33333%;
     float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
@@ -831,77 +830,94 @@ th:first-child {
   .sidebar-content .content {
     width: 66.66667%;
     float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 @media (min-width: 70em) {
   .sidebar-content .sidebar-primary {
     width: 33.33333%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
+@media (min-width: 50em) {
+  .content-sidebar-sidebar .content {
+    width: 66.66667%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
 @media (min-width: 70em) {
   .content-sidebar-sidebar .content {
     width: 50%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 50em) {
+  .content-sidebar-sidebar .sidebar-primary {
+    width: 33.33333%;
+    float: left;
+    margin-left: 58.33333%;
+    margin-right: -100%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 @media (min-width: 70em) {
   .content-sidebar-sidebar .sidebar-primary {
     width: 25%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 50em) {
+  .content-sidebar-sidebar .sidebar-secondary {
+    width: 33.33333%;
+    float: left;
+    margin-left: 58.33333%;
+    margin-right: -100%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 @media (min-width: 70em) {
   .content-sidebar-sidebar .sidebar-secondary {
     width: 25%;
     float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
-@media (min-width: 70em) {
-  .sidebar-content-sidebar .content {
-    width: 50%;
-    float: left;
-    margin-left: 16.66667%;
-    margin-right: -100%;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
-  }
-}
-@media (min-width: 70em) {
-  .sidebar-content-sidebar .sidebar-primary {
-    width: 25%;
-    float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
-  }
-}
-@media (min-width: 70em) {
-  .sidebar-content-sidebar .sidebar-secondary {
-    width: 25%;
+@media (min-width: 50em) {
+  .sidebar-sidebar-content .content {
+    width: 66.66667%;
     float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
-
 @media (min-width: 70em) {
   .sidebar-sidebar-content .content {
     width: 50%;
     float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 50em) {
+  .sidebar-sidebar-content .sidebar-primary {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 @media (min-width: 70em) {
@@ -910,16 +926,84 @@ th:first-child {
     float: left;
     margin-left: 25%;
     margin-right: -100%;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 50em) {
+  .sidebar-sidebar-content .sidebar-secondary {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 @media (min-width: 70em) {
   .sidebar-sidebar-content .sidebar-secondary {
     width: 25%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+
+@media (min-width: 50em) {
+  .sidebar-content-sidebar .content {
+    width: 66.66667%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 70em) {
+  .sidebar-content-sidebar .content {
+    width: 50%;
+    float: left;
+    margin-left: 25%;
+    margin-right: -100%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 50em) {
+  .sidebar-content-sidebar .sidebar-primary {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 70em) {
+  .sidebar-content-sidebar .sidebar-primary {
+    width: 25%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 50em) {
+  .sidebar-content-sidebar .sidebar-secondary {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 70em) {
+  .sidebar-content-sidebar .sidebar-secondary {
+    width: 25%;
+    float: right;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+
+@media (min-width: 70em) {
+  .full-width-content .content {
+    width: 100%;
+    float: left;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
@@ -939,8 +1023,8 @@ th:first-child {
   .footer-widgets-1 {
     width: 33.33333%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
@@ -948,8 +1032,8 @@ th:first-child {
   .footer-widgets-2 {
     width: 33.33333%;
     float: left;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
@@ -957,14 +1041,13 @@ th:first-child {
   .footer-widgets-3 {
     width: 33.33333%;
     float: right;
-    padding-left: 2.08333%;
-    padding-right: 2.08333%;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
   }
 }
 
 /* ## Column Classes
 --------------------------------------------- */
-/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
 @media (min-width: 600px) {
   .five-sixths,
   .four-sixths,
