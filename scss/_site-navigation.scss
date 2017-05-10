@@ -1,8 +1,10 @@
 .genesis-nav-menu {
   clear: both;
-  @include font-size(1.6);
+// @include font-size(1.6);
   font-weight: 600;
   line-height: 1;
+  max-width: 80em;
+  margin: 0 auto;
 }
 
 .genesis-nav-menu .menu-item {
@@ -10,6 +12,7 @@
   margin-bottom: 0;
   padding-bottom: 0;
   text-align: left;
+  @include font-size(1.6);
 }
 
 .genesis-nav-menu a {
@@ -27,7 +30,9 @@
   color: #c3251d;
   text-decoration: underline;
 }
-
+.genesis-nav-menu .right {
+  @include font-size(1.6);
+}
 .genesis-nav-menu .sub-menu {
   border-top: 1px solid #eee;
   left: -9999px;
@@ -110,11 +115,17 @@
 
 /* ## Footer Navigation
 --------------------------------------------- */
-
-.site-footer .genesis-nav-menu {
-  padding-bottom: 20px;
+.nav-secondary {
+  background: #fff;
 }
 
-.site-footer .genesis-nav-menu a {
+.nav-secondary .genesis-nav-menu {
+  max-width: 80em;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.nav-secondary .genesis-nav-menu a {
   padding: 0 20px 10px;
 }

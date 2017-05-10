@@ -68,13 +68,20 @@ $susy: (
 .sidebar-secondary {
 }
 
-.content-sidebar {
+// added nolayout, if all layouts are removed from Genesis, you still at least get content-sidebar layout.
+.content-sidebar,
+.nolayout {
   .content {
     @include breakpoint(large) {
       @include span(8);
     }
   }
   .sidebar-primary {
+    @include breakpoint(large) {
+      @include span(last 4);
+    }
+  }
+  .sidebar-secondary {
     @include breakpoint(large) {
       @include span(last 4);
     }

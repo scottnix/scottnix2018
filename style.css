@@ -794,7 +794,8 @@ th:first-child {
 --------------------------------------------- */
 /* ### Content */
 @media (min-width: 70em) {
-  .content-sidebar .content {
+  .content-sidebar .content,
+  .nolayout .content {
     width: 66.66667%;
     float: left;
     padding-left: 1.38889%;
@@ -802,7 +803,17 @@ th:first-child {
   }
 }
 @media (min-width: 70em) {
-  .content-sidebar .sidebar-primary {
+  .content-sidebar .sidebar-primary,
+  .nolayout .sidebar-primary {
+    width: 33.33333%;
+    float: right;
+    padding-left: 1.38889%;
+    padding-right: 1.38889%;
+  }
+}
+@media (min-width: 70em) {
+  .content-sidebar .sidebar-secondary,
+  .nolayout .sidebar-secondary {
     width: 33.33333%;
     float: right;
     padding-left: 1.38889%;
@@ -1472,10 +1483,10 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 .genesis-nav-menu {
   clear: both;
-  font-size: 16px;
-  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1;
+  max-width: 80em;
+  margin: 0 auto;
 }
 
 .genesis-nav-menu .menu-item {
@@ -1483,6 +1494,8 @@ img.alignright,
   margin-bottom: 0;
   padding-bottom: 0;
   text-align: left;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .genesis-nav-menu a {
@@ -1499,6 +1512,11 @@ img.alignright,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
   color: #c3251d;
   text-decoration: underline;
+}
+
+.genesis-nav-menu .right {
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -1581,11 +1599,18 @@ img.alignright,
 
 /* ## Footer Navigation
 --------------------------------------------- */
-.site-footer .genesis-nav-menu {
-  padding-bottom: 20px;
+.nav-secondary {
+  background: #fff;
 }
 
-.site-footer .genesis-nav-menu a {
+.nav-secondary .genesis-nav-menu {
+  max-width: 80em;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.nav-secondary .genesis-nav-menu a {
   padding: 0 20px 10px;
 }
 

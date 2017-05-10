@@ -164,3 +164,32 @@ function bg_custom_footer() { ?>
   <div class="site-footer"><div class="wrap"><p>Shh!</p></div></div>
 <?php
 }
+
+
+
+//* Unregister content/sidebar layout setting
+// genesis_unregister_layout( 'content-sidebar' );
+//* Unregister sidebar/content layout setting
+// genesis_unregister_layout( 'sidebar-content' );
+//* Unregister content/sidebar/sidebar layout setting
+// genesis_unregister_layout( 'content-sidebar-sidebar' );
+//* Unregister sidebar/sidebar/content layout setting
+// genesis_unregister_layout( 'sidebar-sidebar-content' );
+//* Unregister sidebar/content/sidebar layout setting
+// genesis_unregister_layout( 'sidebar-content-sidebar' );
+//* Unregister full-width content layout setting
+// genesis_unregister_layout( 'full-width-content' );
+
+
+//* Customize search form input box text
+add_filter( 'genesis_search_text', 'sp_search_text' );
+function sp_search_text( $text ) {
+  return esc_attr( 'Search' );
+}
+
+//* Remove Genesis SEO Settings menu link
+remove_theme_support( 'genesis-seo-settings-menu' );
+
+//* Remove Genesis in-post SEO Settings
+remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
+
