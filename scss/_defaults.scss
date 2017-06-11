@@ -2,7 +2,7 @@
 --------------------------------------------- */
 
 html {
-  font-size: 62.5%; /* 10px browser default */
+  font-size: 62.5%; // 10px browser default
 }
 
 /* Chrome fix */
@@ -171,6 +171,7 @@ figure {
   float: left;
   margin: 0 0 28px;
   text-align: center;
+  width: 100%;
 
   .gallery-columns-1 & {
     @include breakpoint(600px) {
@@ -185,7 +186,7 @@ figure {
   }
   .gallery-columns-3 & {
 
-    @include breakpoint(600px) {
+    @include breakpoint(40em) {
       width: 33%;
     }
   }
@@ -274,13 +275,9 @@ input[type="radio"] {
   width: auto;
 }
 
-::-moz-placeholder {
+::placeholder {
   color: #333;
   opacity: 1;
-}
-
-::-webkit-input-placeholder {
-  color: #333;
 }
 
 button,

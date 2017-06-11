@@ -150,7 +150,6 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
-
 // custom stuff here for now.
 
 //* Remove the site footer
@@ -165,8 +164,6 @@ function bg_custom_footer() { ?>
 <?php
 }
 
-
-
 //* Unregister content/sidebar layout setting
 // genesis_unregister_layout( 'content-sidebar' );
 //* Unregister sidebar/content layout setting
@@ -180,7 +177,6 @@ function bg_custom_footer() { ?>
 //* Unregister full-width content layout setting
 // genesis_unregister_layout( 'full-width-content' );
 
-
 //* Customize search form input box text
 add_filter( 'genesis_search_text', 'sp_search_text' );
 function sp_search_text( $text ) {
@@ -192,4 +188,10 @@ remove_theme_support( 'genesis-seo-settings-menu' );
 
 //* Remove Genesis in-post SEO Settings
 remove_action( 'admin_menu', 'genesis_add_inpost_seo_box' );
+
+//* Modify the WordPress read more link
+add_filter( 'the_content_more_link', 'sp_read_more_link' );
+function sp_read_more_link() {
+  return '<a class="more-link button" href="' . get_permalink() . '">Continue Reading</a>';
+}
 

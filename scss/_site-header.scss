@@ -62,4 +62,11 @@
 --------------------------------------------- */
 
  .site-header .widget-area {
+  padding: 30px;
+  @include breakpoint(medium) {
+    padding: 0;
   }
+}
+.site-header .widget {
+
+}
