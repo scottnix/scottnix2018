@@ -2,25 +2,24 @@
 --------------------------------------------- */
 
 html {
-  font-size: 62.5%; // 10px browser default
-}
 
-/* Chrome fix */
-
-body,
-body > div {
-  @include font-size(2);
 }
 
 body {
-  background-color: #eee;
-  color: #333;
+  margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  @include font-size(2);
+  font-size: 105%;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   line-height: 1.625;
-  margin: 0;
+  color: #333;
+
+  @include breakpoint(medium) {
+    font-size: 112%;
+  }
+  @include breakpoint(large) {
+    font-size: 120%;
+  }
 }
 
 a,
@@ -93,13 +92,12 @@ blockquote {
 blockquote::before {
   content: "\201C";
   display: block;
-  @include font-size(3);
+  font-size: 30px;
   height: 0;
   left: -20px;
   position: relative;
   top: -10px;
 }
-
 
 /* ## Headings
 --------------------------------------------- */
@@ -117,27 +115,28 @@ h6 {
 }
 
 h1 {
-  @include font-size(3.6);
+  font-size: 2.250em;
 }
 
 h2 {
-  @include font-size(3);
+  font-size: 1.875em;
 }
 
 h3 {
-  @include font-size(2.4);
+  font-size: 1.5em;
 }
 
 h4 {
-  @include font-size(2);
+  font-size: 1.25em;
+
 }
 
 h5 {
-  @include font-size(1.8);
+  font-size: 1.125em;
 }
 
 h6 {
-  @include font-size(1.6);
+  font-size: 1em;
 }
 
 /* ## Objects
@@ -160,94 +159,6 @@ figure {
   margin: 0;
 }
 
-/* ## Gallery
---------------------------------------------- */
-
-.gallery {
-  overflow: hidden;
-}
-
-.gallery-item {
-  float: left;
-  margin: 0 0 28px;
-  text-align: center;
-  width: 100%;
-
-  .gallery-columns-1 & {
-    @include breakpoint(600px) {
-
-    }
-  }
-  .gallery-columns-2 & {
-
-    @include breakpoint(600px) {
-      width: 50%;
-    }
-  }
-  .gallery-columns-3 & {
-
-    @include breakpoint(40em) {
-      width: 33%;
-    }
-  }
-  .gallery-columns-4 & {
-
-    @include breakpoint(600px) {
-      width: 25%;
-    }
-  }
-  .gallery-columns-5 & {
-
-    @include breakpoint(600px) {
-      width: 20%;
-    }
-  }
-  .gallery-columns-6 & {
-
-    @include breakpoint(600px) {
-      width: 16.6666%;
-    }
-  }
-  .gallery-columns-7 & {
-
-    @include breakpoint(600px) {
-      width: 14.2857%;
-    }
-  }
-  .gallery-columns-8 & {
-
-    @include breakpoint(600px) {
-      width: 12.5%;
-    }
-  }
-  .gallery-columns-9 & {
-
-    @include breakpoint(600px) {
-        width: 11.1111%;
-    }
-  }
-}
-
-.gallery-columns-2 .gallery-item:nth-child(2n+1),
-.gallery-columns-3 .gallery-item:nth-child(3n+1),
-.gallery-columns-4 .gallery-item:nth-child(4n+1),
-.gallery-columns-5 .gallery-item:nth-child(5n+1),
-.gallery-columns-6 .gallery-item:nth-child(6n+1),
-.gallery-columns-7 .gallery-item:nth-child(7n+1),
-.gallery-columns-8 .gallery-item:nth-child(8n+1),
-.gallery-columns-9 .gallery-item:nth-child(9n+1) {
-  clear: left;
-}
-
-.gallery img {
-  height: auto;
-  padding: 4px;
-}
-
-// .gallery img:focus,
-// .gallery img:hover {
-// }
-
 /* ## Forms
 --------------------------------------------- */
 
@@ -257,7 +168,7 @@ textarea {
   background-color: #fff;
   border: 1px solid #ddd;
   color: #333;
-  @include font-size(1.8);
+  font-size: 1.125em;
   font-weight: 400;
   padding: 16px;
   width: 100%;
@@ -289,7 +200,7 @@ input[type="submit"],
   border: 0;
   color: #fff;
   cursor: pointer;
-  @include font-size(1.6);
+  font-size: 1em;
   font-weight: 700;
   padding: 16px 24px;
   text-decoration: none;
@@ -415,7 +326,7 @@ th:first-child {
   padding: 15px 23px 14px;
   text-decoration: none;
   width: auto;
-  z-index: 100000; /* Above WP toolbar. */
+  z-index: 100000;
 }
 
 .more-link {

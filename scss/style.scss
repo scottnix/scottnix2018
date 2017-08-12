@@ -31,7 +31,6 @@
   - Typographical Elements
   - Headings
   - Objects
-  - Gallery
   - Forms
   - Tables
   - Screen Reader Text
@@ -61,7 +60,8 @@
   - Entries
   - Entry Meta
   - Pagination
-  - Comments
+- Gallery
+- Comments
 - Sidebars
 - Footer Widgets
 - Site Footer
@@ -123,6 +123,16 @@
 ---------------------------------------------------------------------------------------------------- */
 
 @import 'content-area';
+
+/* # Gallery
+---------------------------------------------------------------------------------------------------- */
+
+@import 'gallery';
+
+/* # Comments
+---------------------------------------------------------------------------------------------------- */
+
+@import 'comments';
 
 /* # Sidebars
 ---------------------------------------------------------------------------------------------------- */

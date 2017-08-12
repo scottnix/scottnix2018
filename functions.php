@@ -19,7 +19,7 @@ include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 // Set Localization (do not remove).
 add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
 function genesis_sample_localization_setup(){
-	load_child_theme_textdomain( 'scottnix2018', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( 'base_theme', get_stylesheet_directory() . '/languages' );
 }
 
 // Add the helper functions.
@@ -32,18 +32,18 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 // Add WooCommerce support.
-include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php' );
+// include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php' );
 
-// Add the required WooCommerce styles and Customizer CSS.
-include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.php' );
+// Add the required WooCommerce styles and Customizer CSS
+// include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.php' );
 
 // Add the Genesis Connect WooCommerce notice.
-include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php' );
+// include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php' );
 
 // Child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'Genesis Sample' );
-define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
-define( 'CHILD_THEME_VERSION', '2.3.0' );
+define( 'CHILD_THEME_NAME', 'Base Child Theme' );
+define( 'CHILD_THEME_URL', 'http://scottnix.com/' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
@@ -52,14 +52,13 @@ function genesis_sample_enqueue_scripts_styles() {
 	wp_enqueue_style( 'genesis-sample-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
 	wp_localize_script(
 		'genesis-sample-responsive-menu',
 		'genesis_responsive_menu',
 		genesis_sample_responsive_menu_settings()
 	);
-
+  wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . "/js/custom.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
 }
 
 // Define our responsive menu settings.
@@ -148,6 +147,7 @@ function genesis_sample_comments_gravatar( $args ) {
 
 	return $args;
 
+
 }
 
 // custom stuff here for now.
@@ -195,3 +195,12 @@ function sp_read_more_link() {
   return '<a class="more-link button" href="' . get_permalink() . '">Continue Reading</a>';
 }
 
+//* Add support for structural wraps
+add_theme_support( 'genesis-structural-wraps', array(
+    'header',
+    'menu-primary',
+    'menu-secondary',
+    'site-inner',
+    'footer-widgets',
+    'footer'
+) );
