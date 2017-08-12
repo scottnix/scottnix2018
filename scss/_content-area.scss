@@ -2,12 +2,10 @@
 --------------------------------------------- */
 
 .entry {
-  background-color: #fff;
-  padding: 30px;
-  margin-bottom: 5%;
+//  margin-bottom: 5%;
 
   @include breakpoint(medium) {
-    padding: 70px 80px;
+//    padding: 70px 80px;
   }
 }
 
@@ -39,7 +37,7 @@
 --------------------------------------------- */
 
 p.entry-meta {
-  @include font-size(1.6);
+  font-size: 1em;
   margin-bottom: 0;
 }
 
@@ -78,12 +76,13 @@ p.entry-meta {
   display: inline;
 }
 
+.entry-pagination a,  // todo, this style by default is garbage. Multiple Entry Pages Buttons. Previously was nothing but still is ugly.
 .archive-pagination a {
   background-color: #fff;
   color: #333;
   cursor: pointer;
   display: inline-block;
-  @include font-size(1.6);
+  font-size: 1em;
   font-weight: 600;
   padding: 8px 12px;
   text-decoration: none;
@@ -96,66 +95,11 @@ p.entry-meta {
   color: #fff;
 }
 
-/* ## Comments
---------------------------------------------- */
-
-.comment-respond,
-.entry-comments,
-.entry-pings {
-  background-color: #fff;
-  @include font-size(1.6);
-  padding: 30px;
-  margin-bottom: 5%;
+.pagination-next {
 }
 
-.comment-respond,
-.entry-pings {
-  @include breakpoint(medium) {
-    padding: 60px 60px 32px;
-  }
+.pagination-previous {
 }
 
-.entry-comments {
-  @include breakpoint(medium) {
-    padding: 60px;
-  }
-}
-
-.comment-list li {
-  padding: 40px 0 0 30px;
-}
-
-.comment-list .depth-1 {
-  padding-left: 0;
-}
-
-.comment-header {
-  margin-bottom: 30px;
-}
-
-.comment-content {
-  clear: both;
-}
-
-.comment-content ul > li {
-  list-style-type: disc;
-}
-
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-  width: 50%;
-}
-
-.comment-respond label {
-  display: block;
-  margin-right: 12px;
-}
-
-.comment-header p {
-  margin-bottom: 0;
-}
-
-.entry-pings .reply {
-  display: none;
+.pagination-omission {
 }

@@ -1,10 +1,8 @@
 .site-footer {
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  @include font-size(1.6);
+  font-size: 1em;
   line-height: 1;
-  padding: 60px 0;
   text-align: center;
+  padding: 30px;
 }
 
 .site-footer p {

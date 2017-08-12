@@ -1,6 +1,5 @@
 .genesis-nav-menu {
   clear: both;
-// @include font-size(1.6);
   font-weight: 600;
   line-height: 1;
   max-width: 80em;
@@ -12,7 +11,7 @@
   margin-bottom: 0;
   padding-bottom: 0;
   text-align: left;
-  @include font-size(1.6);
+  font-size: 1em;
 }
 
 .genesis-nav-menu a {
@@ -31,7 +30,7 @@
   text-decoration: underline;
 }
 .genesis-nav-menu .right {
-  @include font-size(1.6);
+  font-size: 1em;
 }
 .genesis-nav-menu .sub-menu {
   border-top: 1px solid #eee;
@@ -47,7 +46,7 @@
   background-color: #fff;
   border: 1px solid #eee;
   border-top: 0;
-  @include font-size(1.4);
+  font-size: .875em;
   padding: 20px;
   position: relative;
   width: 200px;

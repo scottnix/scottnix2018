@@ -1,14 +1,9 @@
-
-
 /* ## Title Area
 --------------------------------------------- */
 .site-header {
-  background-color: #fff;
 }
 
 .title-area {
-  float: left;
-  padding: 10px 0;
 }
 
 .header-image .title-area {
@@ -16,12 +11,8 @@
   padding: 0;
 }
 
-.header-full-width .title-area {
-  float: none;
-}
-
 .site-title {
-  @include font-size(3);
+  font-size: 1.875em;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -42,7 +33,7 @@
 }
 
 .site-description {
-  @include font-size(1.6);
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -61,11 +52,8 @@
 /* ## Widget Area
 --------------------------------------------- */
 
- .site-header .widget-area {
-  padding: 30px;
-  @include breakpoint(medium) {
-    padding: 0;
-  }
+.site-header .widget-area {
+
 }
 .site-header .widget {
 
