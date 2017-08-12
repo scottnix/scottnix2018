@@ -1,11 +1,40 @@
 $susy: (
     columns: 12,
-    gutters: .5,
+    gutters: 1,
     math: fluid,
     output: float,
     gutter-position: inside,
     global-box-sizing: (border-box)
 );
+
+// ## Visual Aids
+//------------------------------------------- */
+
+// div {
+//   background: rgba(0,0,0, 0.1);
+// }
+
+// section, aside, header, footer, main {
+//   background: rgba(0,0,0, 0.1);
+// }
+
+// nav, ul {
+//   background: rgba(0,0,0, 0.1);
+// }
+
+/* ## Susy Grid Containers
+--------------------------------------------- */
+
+
+.site-header > .wrap,
+.nav-primary > .wrap,
+.site-inner > .wrap,
+.footer-widgets > .wrap {
+  padding: 30px;
+  @include breakpoint(large) {
+    @include container(80em); // set susy grid container
+  }
+}
 
 /* ## Site Containers
 --------------------------------------------- */
@@ -16,21 +45,24 @@ $susy: (
 .site-header {
 }
 
-.site-header > .wrap {
-  @include breakpoint(large) {
-    @include container(80em); // set susy grid container
-  }
-}
-
 .site-header .title-area {
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     @include span(8);
   }
 }
+.header-full-width .title-area {
+  @include span(12);
+}
 
 .site-header .widget-area {
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     @include span(last 4);
+  }
+}
+
+.nav-primary {
+  @include breakpoint(large) {
+    @include span(12);
   }
 }
 
@@ -38,9 +70,6 @@ $susy: (
   clear: both;
   padding-top: 40px;
   word-wrap: break-word;
-  @include breakpoint(large) {
-    @include container(80em); // set susy grid container
-  }
 }
 
 .landing-page .site-inner {
@@ -184,14 +213,13 @@ $susy: (
 
 .full-width-content .content {
   @include breakpoint(large) {
-    @include span(12);
+    @include span(isolate 10 at 2);
   }
 }
 
 /* ### Footer */
 
-.footer-widgets .wrap {
-  @include container(80em); // set susy grid container
+.footer-widgets {
 }
 
 .footer-widgets-1 {
@@ -214,7 +242,6 @@ $susy: (
 
 /* ## Column Classes
 --------------------------------------------- */
-// Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
 
 .five-sixths,
 .four-sixths,
@@ -228,13 +255,13 @@ $susy: (
 .two-sixths,
 .two-thirds {
 
-  @include breakpoint(600px) {
+  @include breakpoint(medium) {
      float: left;
      margin-left: 2.564102564102564%;
   }
 }
 
-@include breakpoint(600px) {
+@include breakpoint(medium) {
   .one-half,
   .three-sixths,
   .two-fourths {

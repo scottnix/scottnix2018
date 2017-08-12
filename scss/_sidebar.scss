@@ -1,17 +1,13 @@
 .sidebar {
-  @include font-size(1.6);
+  font-size: 1em;
   margin-bottom: 5%;
-
-  @include breakpoint(860px) {
+  @include breakpoint(medium) {
     margin-bottom: 40px;
   }
 }
 
 .sidebar .widget {
-  background-color: #fff;
-  padding: 30px;
   margin-bottom: 5%;
   @include breakpoint(medium) {
-    padding: 40px;
   }
 }
