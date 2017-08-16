@@ -1,11 +1,4 @@
-// sass mixins - sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins
-
-// Susy Grids - susy.oddbird.net/
-
-@import 'susy';
-
 // media query breakpoint mixin - scottnix.com/placement-of-media-queries/
-
 @mixin breakpoint($point) {
   @if $point == medium {
     @media (min-width: 50em)  { @content; }
@@ -16,10 +9,4 @@
   @else if $point { // allows custom breakpoints
     @media (min-width: $point) { @content; }
   }
-}
-
-// rem font sizing mixin - https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
-@mixin font-size($sizeValue: 1.6) {
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
 }

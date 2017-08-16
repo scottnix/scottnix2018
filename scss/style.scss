@@ -59,6 +59,7 @@
 - Content Area
   - Entries
   - Entry Meta
+  - More Link
   - Pagination
 - Gallery
 - Comments
@@ -87,7 +88,8 @@
 /* #  Layout and Structure
 ---------------------------------------------------------------------------------------------------- */
 
-@import 'layouts/main';
+@import 'layouts/css-grid-layout';
+// @import 'layouts/main';
 
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */

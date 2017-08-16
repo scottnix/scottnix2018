@@ -2,11 +2,6 @@
 --------------------------------------------- */
 
 .entry {
-//  margin-bottom: 5%;
-
-  @include breakpoint(medium) {
-//    padding: 70px 80px;
-  }
 }
 
 .entry-content ol,
@@ -37,8 +32,8 @@
 --------------------------------------------- */
 
 p.entry-meta {
-  font-size: 1em;
   margin-bottom: 0;
+  font-size: 1em;
 }
 
 .entry-header .entry-meta {
@@ -46,8 +41,8 @@ p.entry-meta {
 }
 
 .entry-footer .entry-meta {
-  border-top: 1px solid #eee;
   padding-top: 24px;
+  border-top: 1px solid #eee;
 }
 
 .entry-categories,
@@ -58,6 +53,13 @@ p.entry-meta {
 .entry-comments-link::before {
   content: "\2014";
   margin: 0 6px 0 2px;
+}
+
+/* ## More Link
+--------------------------------------------- */
+
+.more-link {
+  position: relative;
 }
 
 /* ## Pagination
@@ -76,16 +78,16 @@ p.entry-meta {
   display: inline;
 }
 
-.entry-pagination a,  // todo, this style by default is garbage. Multiple Entry Pages Buttons. Previously was nothing but still is ugly.
+.entry-pagination a,
 .archive-pagination a {
+  display: inline-block;
+  padding: 8px 12px;
   background-color: #fff;
   color: #333;
-  cursor: pointer;
-  display: inline-block;
   font-size: 1em;
   font-weight: 600;
-  padding: 8px 12px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .archive-pagination a:focus,
